@@ -241,8 +241,9 @@ hr {
     .main__blog__post div .post__button {
       position: absolute;
       top: -20px;
-      width: 70%;
+      width: 50%;
       height: 15px;
+      left: 26%;
       padding-top: 15px;
       padding-bottom: 15px;
       border-radius: 4px;
