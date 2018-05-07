@@ -20,6 +20,35 @@ $font-stack: $primary-font, sans-serif;
 
 $secondary-font: 'Montserrat-Regular', sans-serif;
 $monserrat-exbold: 'Montserrat-ExtraBold';
+$secondary-font-bold: $monserrat-exbold;
+
+  //Font Sizes
+  @mixin section-title() {
+    font-size: 2em;
+    font-family: $secondary-font-bold;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  @mixin section-subtitle() {
+    font-size: 2em;
+    font-family: $secondary-font;
+    text-align: center;
+    padding-bottom: 70px;
+  }
+
+  @mixin paragraph() {
+    font-family: $primary-font;
+    font-size: 1em;
+    line-height: 25px;
+  }
+
+  @mixin small-title () {
+    font-size: 1.1em;
+    font-family: $secondary-font;
+    font-weight: 800;
+  }
 
 // colors
 $yellow: #fbe900;
@@ -230,4 +259,75 @@ a {
       text-transform: uppercase;
       margin-bottom: 40px; //Поменять на резиновые значения
     }
+
+    .header__content__text {
+      margin: 0 auto;
+      width: 75%;
+      margin-bottom: 50px;
+    }
+
+    .header__content__button {
+      width: 220px;
+      height: 70px;
+      border-radius: 4px;
+      padding: 15px 50px;
+      background-color: $yellow;
+      color: $black;
+      font-family: $secondary-font;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
 // end of Header
+
+
+
+
+
+
+// Main
+
+  // Service
+
+  .main__service {
+    background-color: $light-grey;
+  }
+
+    .main__service__title {
+      @include section-title();
+    }
+
+    .main__service__subtitle {
+      @include section-subtitle();
+    }
+
+    .main__service__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+    }
+      .main__service__list__left,
+      .main__service__list__right {
+        flex-basis: 45%;
+      }
+
+      .main__service__item {
+        display: flex;
+        padding-bottom: 60px; //Возможно поменять на %
+          i {
+            float: left;
+            font-size: 3em;
+            color: $blue;
+            padding-right: 40px;
+          }
+          h3 {
+            @include small-title();
+            padding-bottom: 15px;
+          }
+          p {
+            @include paragraph();
+          }
+      }
+
+// End of Main
