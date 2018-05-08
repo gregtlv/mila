@@ -126,7 +126,7 @@ hr {
   color: white; }
 
 .header__content {
-  padding-top: 180px;
+  padding-top: 14%;
   width: 80%;
   margin: 0 auto;
   text-align: center; }
@@ -209,13 +209,13 @@ hr {
 
 .main__blog {
   width: 100%;
-  height: 834px;
   background: #fdfdfd;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: url(../img/blog/bg_1600.jpg); }
+  height: 820px;
+  background-image: url(../img/blog/bg_1600.jpg);
+  background-attachment: fixed; }
 
 .main__blog__posts {
   display: flex;
@@ -243,7 +243,7 @@ hr {
       top: -20px;
       width: 50%;
       height: 15px;
-      left: 26%;
+      left: 25%;
       padding-top: 15px;
       padding-bottom: 15px;
       border-radius: 4px;
@@ -252,12 +252,85 @@ hr {
       font-family: "Montserrat-Regular", sans-serif;
       font-weight: 800;
       text-transform: uppercase; }
+      .main__blog__post div .post__button span {
+        font-size: 1em; }
   .main__blog__post h3 {
     font-family: "Montserrat-ExtraBold";
     font-size: 1.2em;
     margin-bottom: 25px; }
   .main__blog__post p {
     line-height: 25px; }
+
+.main__contacts {
+  background-color: #fdfdfd; }
+
+.main__contacts__top {
+  width: 100%;
+  background: #fdfdfd;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 360px;
+  background-image: url(../img/contacts/bg_1600.jpg);
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  text-align: center;
+  position: relative; }
+  .main__contacts__top i {
+    text-align: center;
+    color: #fbe900;
+    font-size: 10vw;
+    position: absolute;
+    bottom: -15px;
+    right: 45%; }
+
+.main__contacts__title {
+  font-size: 2em;
+  font-family: "Montserrat-ExtraBold";
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: white; }
+
+.main__contacts__subtitle {
+  font-size: 2em;
+  font-family: "Montserrat-Regular", sans-serif;
+  text-align: center;
+  padding-bottom: 70px;
+  color: white; }
+
+.main__contacts__bottom {
+  margin-top: 80px;
+  color: #262626; }
+
+.main__contacts__bottom__list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 130px; }
+
+.main__contacts__item {
+  display: flex; }
+  .main__contacts__item i {
+    font-size: 3em;
+    margin-right: 25px; }
+
+.main__contacts__item__content h3 {
+  text-transform: uppercase;
+  font-family: "Lato-Regular";
+  font-weight: 600;
+  padding-bottom: 20px; }
+.main__contacts__item__content p {
+  line-height: 25px; }
+
+.main__contacts__messenger__icons i {
+  font-size: 1.5em; }
+
+.footer {
+  background-color: #fbe900;
+  height: 180px;
+  text-align: center; }
+  .footer p {
+    padding-top: 50; }
 
 @media screen and (max-width: 1010px) {
   .header__top__up__contacts {
