@@ -57,7 +57,6 @@ $secondary-font-bold: $monserrat-exbold;
 
   @mixin bg() {
     width: 100%;
-    background: $light-grey;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -72,6 +71,72 @@ $secondary-font-bold: $monserrat-exbold;
     font-weight: 800;
     text-transform: uppercase;
   }
+
+// Corners
+  @mixin corners-top() {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  @mixin corners-botton() {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+// Card Offers
+  @mixin card-offer() {
+    img {
+      @include corners-top();
+      width: 100%
+    }
+    .card__body {
+      @include corners-botton();
+      margin-top: -2px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      background-color: $light-grey;
+      text-align: center;
+      color: $black;
+    }
+
+    .card__trip__duration {
+      font-family: $secondary-font;
+      font-weight: 500;
+      font-size: 1.2em; //Поменять на резиновые значения
+    }
+
+    .card__city__destination {
+      @include small-title();
+      font-family: $secondary-font-bold;
+      font-weight: 500;
+      font-size: 1.5em;
+      padding: 15px 0px; //Поменять на резиновые значения
+    }
+
+    .card__trip__description {
+      // font-weight: 500;
+    }
+
+    .card__trip__price {
+      @include bold-title();
+      font-size: 1.8em; //Поменять на резиновые значения
+      font-weight: 500;
+      padding: 15px 0px;
+    }
+
+    .card__purchase__button {
+      @include yellow-button();
+      padding: 14px 0px;
+      margin: 0 auto;
+      width: 65%
+    }
+  }
+
+  //End of Card
+
 
 // colors
 $yellow: #fbe900;
@@ -365,6 +430,7 @@ p, li, ul {
     @include bg();
     height: 820px; //Поменять на что то другое может %
 
+    background: $light-grey;
     background-image: url(../img/blog/bg_1600.jpg);
     background-attachment: fixed;
 
@@ -503,11 +569,59 @@ p, li, ul {
       }
 
     }
-
-
-
     // End of Contacts
 
+    // Offers main__offers
+
+    .main__offers {
+
+    }
+
+      .main__offers__top {
+        @include bg();
+        background-color: $light-blue;
+        // height: 50%;
+        background-size: cover;
+        background-image: url(../img/offers/bg_1600_img.jpg);
+      }
+      .main__offers__cards {
+        width: 100%;
+      }
+
+      .main__offers__cards__list {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        // flex-wrap: wrap;
+      }
+
+      .offers__card {
+        flex-basis: 35%;
+        @include card-offer();
+      }
+
+      .offers__card__center {
+        flex-basis: 45%;
+        @include card-offer();
+        //Triangle
+      }
+
+      .offers__card__center::after {
+
+      }
+
+
+
+      .main__offers__down {
+        background-color: $light-blue;
+        height: 20%;
+        // content: '';
+      }
+
+    // End of Offers
 
 // End of Main
 
@@ -520,7 +634,7 @@ p, li, ul {
     text-align: center;
 
     p {
-      padding-top: 50%;
+      padding-top: 50;
     }
   }
 
