@@ -94,6 +94,9 @@ hr {
   margin: 0px;
   padding: 0px; }
 
+.lang__toggle {
+  display: none; }
+
 .header__top__down {
   padding: 20px 10px 15px 10px;
   display: flex;
@@ -105,7 +108,7 @@ hr {
   font-family: "Montserrat-ExtraBold";
   font-weight: 300; }
 
-.header__top__down__nav__toggle {
+.header__toggle {
   display: none; }
 
 .header__top__down__nav__item {
@@ -305,7 +308,8 @@ hr {
 .main__contacts__bottom__list {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 130px; }
+  padding-bottom: 130px;
+  flex-wrap: wrap; }
 
 .main__contacts__item {
   display: flex; }
@@ -356,7 +360,8 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
 
 .offers__card {
   flex-basis: 35%; }
@@ -496,6 +501,9 @@ hr {
 
 @media screen and (max-width: 1010px) {
   .header__top__up__contacts {
+    width: 50%; }
+
+  .header__top__up__contacts {
     width: 50%; } }
 @media screen and (max-width: 768px) {
   .container {
@@ -503,5 +511,52 @@ hr {
 
   .header__top__up__contacts {
     width: 60%; } }
+@media (min-width: 320px) and (max-width: 480px) {
+  .header__top__up__contacts {
+    justify-content: flex-start;
+    width: 35%; }
+
+  .header__top__up__contact__item i {
+    padding-right: 10px; }
+
+  .header__top__up__contact__item__text {
+    display: none; }
+
+  .header__top__up__social__item {
+    padding-right: 7px; }
+    .header__top__up__social__item:last-child {
+      padding-right: 0px; }
+    .header__top__up__social__item .fa-telegram {
+      display: none; }
+
+  .header__top__up__lang {
+    display: none;
+    text-align: right; }
+
+  .lang__toggle {
+    display: block; }
+
+  .header__top__down__nav__list {
+    display: none;
+    text-align: right; }
+
+  .header__toggle {
+    display: block;
+    font-size: 6vw; }
+
+  .offers__card {
+    flex-basis: 100%; }
+
+  .offers__card__center {
+    flex-basis: 100%;
+    margin-top: 20px;
+    margin-bottom: 70px; }
+
+  .main__offers__top::after {
+    height: 8%;
+    z-index: -1; }
+
+  .main__offers {
+    padding-bottom: 50px; } }
 
 /*# sourceMappingURL=main.css.map */

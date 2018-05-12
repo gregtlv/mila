@@ -291,6 +291,9 @@ p, li, ul {
       margin: 0px;
       padding: 0px;
     }
+    .lang__toggle {
+      display: none;
+    }
 
 
   // Header Top Down
@@ -319,7 +322,7 @@ p, li, ul {
     // justify-content: space-between;
     // width: 100%;
   }
-  .header__top__down__nav__toggle {
+  .header__toggle {
     display: none;
   }
   .header__top__down__nav__item {
@@ -379,11 +382,6 @@ p, li, ul {
       @include yellow-button();
     }
 // end of Header
-
-
-
-
-
 
 // Main
 
@@ -555,6 +553,7 @@ p, li, ul {
       display: flex;
       justify-content: space-between;
       padding-bottom: 130px;
+      flex-wrap: wrap;
     }
 
     .main__contacts__item {
@@ -592,7 +591,6 @@ p, li, ul {
 
     .main__offers {
       padding-bottom: 145px;
-
     }
 
       .main__offers__top {
@@ -612,12 +610,11 @@ p, li, ul {
         top: 95%;
         z-index: -1;
         background-color: $light-blue;
-
       }
 
       .main__offers__cards {
         width: 100%;
-;
+
       }
 
       .main__offers__cards__list {
@@ -627,6 +624,8 @@ p, li, ul {
         justify-content: space-between;
         position: relative;
         align-items: center;
+        flex-wrap: wrap;
+
       }
 
       .offers__card {
@@ -701,6 +700,10 @@ p, li, ul {
   .header__top__up__contacts {
     width: 50%;
   }
+
+  .header__top__up__contacts {
+    width: 50%;
+  }
 }
 
 // 768
@@ -708,7 +711,95 @@ p, li, ul {
   .container {
     width: 90%;
   }
+
   .header__top__up__contacts {
     width: 60%;
   }
+}
+
+
+//Mobile
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  // RU
+
+    // Header
+
+    // Header Contacts
+    .header__top__up__contacts {
+      justify-content: flex-start;
+      width: 35%;
+    }
+
+    .header__top__up__contact__item i {
+      padding-right: 10px;
+    }
+    .header__top__up__contact__item__text {
+      display: none;
+    }
+    // Header Social
+      .header__top__up__social {
+        // display: none;
+      }
+
+      .header__top__up__social__item {
+        padding-right: 7px;
+        &:last-child {
+          padding-right: 0px;
+        }
+        .fa-telegram {
+          display: none;
+        }
+      }
+
+    // Lang
+    .header__top__up__lang {
+      display: none;
+      text-align: right;
+    }
+    .lang__toggle {
+      display: block;
+    }
+
+    //Navigation
+
+    .header__top__down__nav__list {
+      display: none;
+      text-align: right;
+    }
+
+    .header__toggle {
+      display: block;
+      font-size: 6vw;
+    }
+
+    // End Of Header
+
+
+    // Main
+
+    // Offers
+    .offers__card {
+      flex-basis: 100%;
+    }
+
+    .offers__card__center {
+      flex-basis: 100%;
+      margin-top: 20px;
+      margin-bottom: 70px;
+    }
+
+    .main__offers__top::after {
+      height: 8%;
+      z-index: -1;
+    }
+
+    .main__offers {
+      padding-bottom: 50px;
+    }
+
+    // End Of Main
+
+
 }
