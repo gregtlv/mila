@@ -361,7 +361,7 @@ hr {
   justify-content: space-between;
   position: relative;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: nowrap; }
 
 .offers__card {
   flex-basis: 35%; }
@@ -546,6 +546,10 @@ hr {
 
   .offers__card {
     flex-basis: 100%; }
+  
+  .main__offers__cards__list {
+    flex-wrap: wrap;
+  }
 
   .offers__card__center {
     flex-basis: 100%;
