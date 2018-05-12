@@ -223,7 +223,7 @@ hr {
 .main__blog__posts {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between; }
 
 .main__blog__post {
@@ -546,21 +546,61 @@ hr {
 
   .offers__card {
     flex-basis: 100%; }
-  
-  .main__offers__cards__list {
-    flex-wrap: wrap;
-  }
 
   .offers__card__center {
     flex-basis: 100%;
     margin-top: 20px;
     margin-bottom: 70px; }
 
+  .main__offers__cards__list {
+    flex-wrap: wrap; }
+
   .main__offers__top::after {
     height: 8%;
     z-index: -1; }
 
   .main__offers {
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+
+  .main__service__item__content {
+    display: none;
+    padding: 0px; }
+
+  .main__service__item {
+    padding-bottom: 34px; }
+    .main__service__item i {
+      padding: 0px; }
+
+  .main__blog {
+    height: auto;
+    padding-bottom: 60px; }
+
+  .main__blog__posts {
+    flex-wrap: wrap; }
+
+  .main__blog__post {
+    max-width: 100%;
+    padding-bottom: 25px; }
+    .main__blog__post:last-child {
+      padding-bottom: 0px; }
+
+  .main__contacts__bottom__list {
+    padding-bottom: 70px;
+    align-items: center; }
+
+  .main__contacts__item i {
+    margin-right: 0px; }
+
+  .main__contacts__item {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding-bottom: 48px; }
+
+  .item__icon {
+    padding-bottom: 10px; }
+
+  .main__contacts__item__content h3 {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

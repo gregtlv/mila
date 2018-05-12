@@ -87,6 +87,10 @@ $secondary-font-bold: $monserrat-exbold;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
 
   }
+// Padding Down
+  @mixin padding-down() {
+    padding-bottom: 60px;
+  }
 // Card Offers
   @mixin card-offer() {
     img {
@@ -454,7 +458,7 @@ p, li, ul {
     .main__blog__posts {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
     }
 
@@ -790,6 +794,10 @@ p, li, ul {
       margin-bottom: 70px;
     }
 
+    .main__offers__cards__list {
+      flex-wrap: wrap;
+    }
+
     .main__offers__top::after {
       height: 8%;
       z-index: -1;
@@ -798,6 +806,68 @@ p, li, ul {
     .main__offers {
       padding-bottom: 50px;
     }
+
+    // Services
+
+    .main__service__item__content {
+      display: none;
+      padding: 0px;
+    }
+
+    .main__service__list__left:first-child {
+
+    }
+
+    .main__service__item {
+      padding-bottom: 34px;
+
+      i {
+        padding: 0px;
+        // margin-bottom: -50px;
+      }
+    }
+
+    //Posts
+    .main__blog {
+      height: auto; //Поменять на что то другое может %
+      @include padding-down();
+    }
+    .main__blog__posts {
+      flex-wrap: wrap;
+    }
+
+    .main__blog__post {
+      max-width: 100%;
+      padding-bottom: 25px;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+    }
+
+    // Contacts
+    .main__contacts__bottom__list {
+      padding-bottom: 70px;
+      align-items: center;
+    }
+    .main__contacts__item i {
+      margin-right: 0px;
+    }
+
+    .main__contacts__item {
+      margin: 0 auto;
+      // width: 40%;
+      display: block;
+      text-align: center;
+      padding-bottom: 48px;
+      }
+      .item__icon {
+        padding-bottom: 10px;
+      }
+      .main__contacts__item__content h3 {
+        display: none;
+
+    }
+
 
     // End Of Main
 
