@@ -238,6 +238,8 @@ p, li, ul {
     background-color: $transparent;
     font-family: $secondary-font;
     padding-top: 25px;
+    padding-bottom: 0px;
+    transition: padding-top 0.5s, padding-bottom 0.5s;
   }
 
   .header__top__up {
@@ -333,6 +335,8 @@ p, li, ul {
     // display: flex;
     // justify-content: space-between;
     // width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s;
   }
   .header__toggle {
     display: none;
@@ -800,9 +804,12 @@ p, li, ul {
       position: relative;
     }
     .header__top__down__nav__list {
-      // display: none;
+      display: none;
       position: absolute;
       right: 0px;
+      opacity: 0;
+      transition: opacity 0.5s;
+
       .header__top__down__nav__item {
         display: block;
         padding-top: 10px;

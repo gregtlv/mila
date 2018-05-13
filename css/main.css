@@ -54,7 +54,9 @@ p, li, ul {
 .header__top {
   background-color: rgba(0, 0, 0, 0.39);
   font-family: "Montserrat-Regular", sans-serif;
-  padding-top: 25px; }
+  padding-top: 25px;
+  padding-bottom: 0px;
+  transition: padding-top 0.5s, padding-bottom 0.5s; }
 
 .header__top__up {
   display: flex;
@@ -114,6 +116,10 @@ hr {
   font-size: 2em;
   font-family: "Montserrat-ExtraBold";
   font-weight: 300; }
+
+.header__top__down__nav__list {
+  opacity: 1;
+  transition: opacity os; }
 
 .header__toggle {
   display: none; }
@@ -562,8 +568,11 @@ hr {
     position: relative; }
 
   .header__top__down__nav__list {
+    display: none;
     position: absolute;
-    right: 0px; }
+    right: 0px;
+    opacity: 0;
+    transition: opacity 0.5s; }
     .header__top__down__nav__list .header__top__down__nav__item {
       display: block;
       padding-top: 10px; }
