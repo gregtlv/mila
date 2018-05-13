@@ -1,3 +1,10 @@
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
 @font-face {
   src: url("./fonts/Montserrat-Regular.otf");
   font-family: "Montserrat-Regular"; }
@@ -232,16 +239,18 @@ hr {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
-  .main__blog__post div {
+  .main__blog__post .main__blog__post__content {
     margin-top: -2px;
     background-color: white;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 55px;
     padding-bottom: 45px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative; }
-    .main__blog__post div .post__button {
+    .main__blog__post .main__blog__post__content .blog__post__date {
+      padding-bottom: 15px; }
+    .main__blog__post .main__blog__post__content .post__button {
       position: absolute;
       top: -20px;
       width: 50%;
@@ -255,7 +264,7 @@ hr {
       font-family: "Montserrat-Regular", sans-serif;
       font-weight: 800;
       text-transform: uppercase; }
-      .main__blog__post div .post__button span {
+      .main__blog__post .main__blog__post__content .post__button span {
         font-size: 1em; }
   .main__blog__post h3 {
     font-family: "Montserrat-ExtraBold";
@@ -499,6 +508,18 @@ hr {
   .footer p {
     padding-top: 50; }
 
+.footer__social__icons {
+  margin-top: 20px; }
+  .footer__social__icons li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 auto; }
+  .footer__social__icons i {
+    font-size: 2em; }
+  .footer__social__icons a:hover {
+    transition: color 0.3s;
+    color: #fdfdfd; }
+
 @media screen and (max-width: 1010px) {
   .header__top__up__contacts {
     width: 50%; }
@@ -536,13 +557,23 @@ hr {
   .lang__toggle {
     display: block; }
 
+  .header__top__down__nav {
+    text-align: right;
+    position: relative; }
+
   .header__top__down__nav__list {
-    display: none;
-    text-align: right; }
+    position: absolute;
+    right: 0px; }
+    .header__top__down__nav__list .header__top__down__nav__item {
+      display: block;
+      padding-top: 10px; }
+    .header__top__down__nav__list li {
+      padding-right: 0px; }
 
   .header__toggle {
     display: block;
-    font-size: 6vw; }
+    font-size: 6vw;
+    margin-bottom: 10px; }
 
   .offers__card {
     flex-basis: 100%; }
@@ -584,12 +615,15 @@ hr {
     .main__blog__post:last-child {
       padding-bottom: 0px; }
 
+  .main__contacts__top {
+    height: auto; }
+
   .main__contacts__bottom__list {
-    padding-bottom: 70px;
-    align-items: center; }
+    padding-bottom: 70px; }
 
   .main__contacts__item i {
-    margin-right: 0px; }
+    text-align: center;
+    margin-right: 5px; }
 
   .main__contacts__item {
     margin: 0 auto;

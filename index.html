@@ -93,8 +93,10 @@
         <!-- Header Top Nav -->
 
         <nav class="header__top__down__nav">
+
           <i id="headerToggle" class="header__toggle fas fa-bars"></i>
-          <ul class="header__top__down__nav__list">
+
+          <ul id="headerNavList" class="header__top__down__nav__list">
             <li class="header__top__down__nav__item">
               <a href="">Главная</a>
             </li>
@@ -237,7 +239,7 @@
                       elit. Magnam, labore totam.</p>
                 </div>
             <li class="main__service__item">
-                <i class="fab fa-fort-awesome"></i>
+                <i class="fas fa-university"></i>
                 <div class="main__service__item__content">
                   <h3>Lorem ipsum dolor sit.</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -295,39 +297,42 @@
         <ul class="main__blog__posts">
           <li class="main__blog__post">
             <img src="./img/blog/1.jpg" alt="Post Image">
-            <div>
+            <div class="main__blog__post__content">
               <a href="#">
                   <div class="post__button">
                   <span>Читать</span>
                 </div>
               </a>
               <h3>Lorem Ipsum Dolor.</h3>
+              <h4 class="blog__post__date">05/17/2018</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
           </li>
           <li class="main__blog__post">
             <img src="./img/blog/1.jpg" alt="Post Image">
-            <div>
+            <div class="main__blog__post__content">
               <a href="#">
                   <div class="post__button">
                   <span>Читать</span>
                 </div>
               </a>
               <h3>Lorem Ipsum Dolor.</h3>
+              <h4 class="blog__post__date">05/17/2018</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
           </li>
           <li class="main__blog__post">
             <img src="./img/blog/1.jpg" alt="Post Image">
-            <div>
+            <div class="main__blog__post__content">
               <a href="#">
                   <div class="post__button">
                   <span>Читать</span>
                 </div>
               </a>
               <h3>Lorem Ipsum Dolor.</h3>
+              <h4 class="blog__post__date">05/17/2018</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
@@ -388,7 +393,6 @@
 
       </ul>
 
-      <ul class="main__contacts__social__icons"></ul>
       </div>
       <!-- End of Container -->
 
@@ -407,6 +411,11 @@
 
   <footer id="footer" class="footer">
     <p>Copyright 2018</p>
+    <ul class="footer__social__icons">
+      <a href="#"><li><i class="fab fa-facebook"></i></li></a>
+      <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+      <a href="#"><li><i class="fab fa-telegram"></i></li></a>
+    </ul>
   </footer>
 
   <!-- End of footer -->
