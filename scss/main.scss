@@ -222,6 +222,8 @@ p, li, ul {
   position: relative;
   z-index: 1;
 
+  transition: padding-bottom 0.3s;
+
 }
   .header::after {
     position: absolute;
@@ -305,7 +307,8 @@ p, li, ul {
       margin: 0px;
       padding: 0px;
     }
-    .lang__toggle {
+    .lang__toggle,
+    .row__up__toggle {
       display: none;
     }
 
@@ -803,6 +806,9 @@ p, li, ul {
       text-align: right;
       position: relative;
     }
+    .header__top__down__nav__item:hover a {
+      padding-bottom: 0px;
+    }
     .header__top__down__nav__list {
       display: none;
       position: absolute;
@@ -823,7 +829,11 @@ p, li, ul {
       display: block;
       font-size: 6vw;
       margin-bottom: 10px;
+    }
 
+    .row__up__toggle {
+      font-size: 6vw;
+      margin-bottom: 10px;
     }
 
     // End Of Header
